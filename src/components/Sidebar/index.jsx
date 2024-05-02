@@ -9,18 +9,18 @@ const Sidebar = () => {
             <div className='list-container'>
                 <p onClick={() => navigate('/dashboard')}>Dashboard</p>
                 <p onClick={() => navigate('/allusers')}>All Users</p>
-                <p>Facebook Users</p>
-                <p>Google Users</p>
-                <p>Items Purchased</p>
-                <p>Total Withdrawals </p>
-                <p>Total Referrals </p>
-                <p>Total Deposits</p>
-                <p>Monthly Deposits</p>
-                <p>Today’s Bonus </p>
-                <p>Guest Users </p>
-                <p>Monthly Winners</p>
-                <p>Daily Winners </p>
-                <p>About Us</p>
+                <p onClick={() => navigate('/facebook-users')}>Facebook Users</p>
+                <p onClick={() => navigate('/google-users')}>Google Users</p>
+                <p onClick={() => navigate('/item-purchased')}>Items Purchased</p>
+                <p onClick={() => navigate('/total-widthdrawals')}>Total Withdrawals </p>
+                <p onClick={() => navigate('/total-referrals')}>Total Referrals </p>
+                <p onClick={() => navigate('/todays-deposits')}>Total Deposit</p>
+                <p onClick={() => navigate('/monthly-deposits')}>Monthly Deposits</p>
+                <p onClick={() => navigate('/todays-bonus')}>Today’s Bonus </p>
+                <p onClick={() => navigate('/guest-users')}>Guest Users </p>
+                <p onClick={() => navigate('/monthly-winners')}>Monthly Winners</p>
+                <p onClick={() => navigate('/daily-winners')}>Daily Winners </p>
+                <p onClick={() => navigate('/about')}>About Us</p>
             </div>
         </div>
     )
