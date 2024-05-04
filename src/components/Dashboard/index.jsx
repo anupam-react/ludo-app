@@ -1,7 +1,11 @@
 import React from "react";
 import "./dashboard.scss";
 import Card from "./Card";
+import useUserList from "../../hooks/useUserList";
 const Dashboard = () => {
+
+  const { leatestUsers } = useUserList()
+  console.log(leatestUsers)
   const cardData = [
     { image: "./el_user.png", title: "TOTAL USERS ", link: "allusers" },
     {
@@ -63,19 +67,14 @@ const Dashboard = () => {
         Latest Users Added
         </div>
         <div className="leatest-user-container">
+          {leatestUsers?.map((data, i)=>(
        <div className="leatest-user">
-        <img src="./logos_facebook.png" alt="" style={{height:"fit-content"}}/>
-        <p>@raj</p>
-       </div>
-       <div className="leatest-user">
-        <img src="./devicon_google (1).png" alt="" style={{height:"fit-content"}}/>
-        <p>@raj</p>
+        <img src={data?.profilePic} alt="" style={{borderRadius:"50px", width:"40px", height:"40px"}}/>
+        <p>{data?.mobileNumber}</p>
        </div>
 
-       <div className="leatest-user">
-        <img src="./devicon_google (1).png" alt="" style={{height:"fit-content"}} />
-        <p>@raj</p>
-       </div>
+          ))}
+  
 
 
         </div>

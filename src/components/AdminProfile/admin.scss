@@ -1,0 +1,135 @@
+.admin-container{
+    box-shadow: 8px 6px 4px 2px #00000040;
+    border-radius: 24px;
+    padding: 10px 40px;
+    .admin-header{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        span{
+            font-size: 30px;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+    }
+    .header-buttons{
+        display: flex;
+        gap: 16px;
+        button{
+            background-color: #D9D9D9;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            height: fit-content;
+        }
+    
+    }
+    .image-container{
+        display: flex;
+        gap: 10px;
+        button{
+            background: transparent;
+            border: 1px solid #F74239;
+            border-radius: 8px;
+            padding: 5px;
+        }
+    }
+    .form-container2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        margin: 20px 0px;
+        label{
+       color: black;
+       font-weight: 600;
+        }
+        input{
+            background-color: transparent;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    }
+    .close-button{
+        display: flex;
+        justify-content: end;
+        margin: 40px 0px;
+        button{
+             background: #11013F40;
+             border: none;
+             padding: 10px 40px;
+             border-radius: 15px;
+             cursor: pointer;
+             font-weight: 600;
+            
+        }
+    }
+
+}
+.modal-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #A88AFB;
+    border-radius: 16px;
+}
+.image-main{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px;
+    label{
+        padding: 8px 12px;
+        background-color: #F74239;
+        border-radius: 10px;
+        font-weight: 500;
+    }
+}
+.image-conatiner1{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.form-container3{
+    margin: 20px 20px;
+    height: 50vh;
+    overflow-y: scroll;
+    label{
+   color: #0D0C0A;
+   font-weight: 600;
+    }
+    input , select{
+        background-color: #D9D9D9;
+        border: none;
+        width: 100%;
+        padding: 10px 0px;
+        border-radius: 10px;
+        margin-top: 5px;
+        margin-bottom: 14px;
+    }
+    select{
+        padding: 10px;
+    }
+}
+.button-conatiner1{
+    display: flex;
+   justify-content: end;
+   margin-right: 20px;
+   margin-bottom: 20px;
+   button{
+    background-color: #F74239;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+   }
+}
