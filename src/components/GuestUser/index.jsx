@@ -1,10 +1,9 @@
 import React from 'react'
 import Tableheader from '../common/Tableheader'
 import './allusers.scss'
-import useUserList from '../../hooks/useUserList'
+import useGuestUsers from '../../hooks/useGuestUsers'
 const GuestUser = () => {
-    const { allUsers } = useUserList()
-    console.log(allUsers)
+    const { allGuestUsers } = useGuestUsers()
     return (
         <div className='user-container'>
             <Tableheader title="Guest Users" />
@@ -16,10 +15,10 @@ const GuestUser = () => {
                         <th>Deposits</th>
                         <th>Referrals</th>
                     </tr>
-                    {allUsers?.map((data, i) => (
+                    {allGuestUsers?.map((data, i) => (
                         <tr key={i}>
                             <td>{data?.firstName + " " + data?.lastName}</td>
-                            <td>{data?.wallet}</td>
+                            <td>${data?.withdraw}</td>
                             <td>${data?.deposite}</td>
                             <td>{data?.joinUser?.length}</td>
                         </tr>

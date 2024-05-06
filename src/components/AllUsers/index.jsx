@@ -25,7 +25,7 @@ const AllUsers = () => {
                             <td>{data?.email}</td>
                             <td>{data?.socialId}</td>
                             <td>{data?.mobileNumber}</td>
-                            <td>{data?.wallet}</td>
+                            <td>${data?.withdraw}</td>
                             <td>${data?.deposite}</td>
                             <td>{data?.joinUser?.length}</td>
                         </tr>

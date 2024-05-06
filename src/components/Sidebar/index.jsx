@@ -20,7 +20,7 @@ const Sidebar = () => {
                 <p onClick={() => navigate('/guest-users')}>Guest Users </p>
                 <p onClick={() => navigate('/monthly-winners')}>Monthly Winners</p>
                 <p onClick={() => navigate('/daily-winners')}>Daily Winners </p>
-                <p onClick={() => navigate('/about')}>About Us</p>
+                {/* <p onClick={() => navigate('/about')}>About Us</p> */}
             </div>
         </div>
     )

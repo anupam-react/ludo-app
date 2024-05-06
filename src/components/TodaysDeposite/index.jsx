@@ -1,10 +1,11 @@
 import React from 'react'
 import './allusers.scss'
-import useUserList from '../../hooks/useUserList'
 import TodaysTableheader from '../common/TodaysTableheader'
+import useTodayDeposite from '../../hooks/useTodayDeposite'
+import { getTime } from '../../utiils'
 const TodaysDeposite = () => {
-    const { allUsers } = useUserList()
-    console.log(allUsers)
+    const { allDeposite } = useTodayDeposite()
+  
     return (
         <div className='user-container'>
             <TodaysTableheader title="Today’s Deposit" />
@@ -15,11 +16,11 @@ const TodaysDeposite = () => {
                         <th>Deposite Amount</th>
                         <th>Time</th>
                     </tr>
-                    {allUsers?.map((data, i) => (
+                    {allDeposite?.map((data, i) => (
                         <tr key={i}>
-                            <td>{data?.firstName + " " + data?.lastName}</td>
-                            <td>{data?.wallet}</td>
-                            <td>${data?.deposite}</td>
+                            <td>{data?.user?.firstName + " " + data?.user?.lastName}</td>
+                            <td>${data?.amount}</td>
+                            <td>{getTime(data?.date)}</td>
                         </tr>
                     ))}
                 </table>

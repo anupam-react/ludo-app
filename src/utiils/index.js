@@ -167,3 +167,21 @@ export function getDateFromISOString(dateString) {
 
   return `${year}-${month}-${day}`;
 }
+
+export function getDate(dateString) {
+  const date = new Date(dateString);
+
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1; // Months are zero-indexed, so add 1
+  const day = date.getDate();
+
+  return `${year}-${month}-${day}`;
+}
+export function getTime(dateString) {
+  const date = new Date(dateString);
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  return `${hours}h-${minutes}m-${seconds}s`;
+}

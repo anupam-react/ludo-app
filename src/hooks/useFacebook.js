@@ -9,10 +9,8 @@ const useFacebook = () => {
             "https://jagjeetludo-backend.vercel.app/api/v1/admin/userList"
         );
         console.log(userData?.data)
-        const facebookData = userData?.data?.filter((data)=> data?.socialType==="Facebook");
-        const googleData = userData?.data?.filter((data)=> data?.socialType==="Google");
-        console.log(facebookData)
-        console.log(googleData)
+        const facebookData = userData?.data?.filter((data)=> data?.socialType?.toLowerCase()==="facebook");
+        const googleData = userData?.data?.filter((data)=> data?.socialType?.toLowerCase()==="google");
         setAllFacebookUsers(facebookData);
         setAllGoogleUsers(googleData)
     };

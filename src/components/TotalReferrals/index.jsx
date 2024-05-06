@@ -1,10 +1,10 @@
 import React from 'react'
 import Tableheader from '../common/Tableheader'
 import './allusers.scss'
-import useUserList from '../../hooks/useUserList'
+import useReffrals from '../../hooks/useReffrals'
 const TotalReferrals = () => {
-    const { allUsers } = useUserList()
-    console.log(allUsers)
+    const { allReffrals } = useReffrals()
+
     return (
         <div className='user-container'>
             <Tableheader title="Total Referrals" />
@@ -15,11 +15,11 @@ const TotalReferrals = () => {
                         <th>Number of Referrals</th>
                         <th>Through</th>
                     </tr>
-                    {allUsers?.map((data, i) => (
+                    {allReffrals?.map((data, i) => (
                         <tr key={i}>
-                            <td>{data?.firstName + " " + data?.lastName}</td>
-                            <td>{data?.wallet}</td>
-                            <td>${data?.deposite}</td>
+                            <td>{data?.user?.firstName + " " + data?.user?.lastName}</td>
+                            <td>{data?.noOfRefferal}</td>
+                            <td>{data?.user?.refferalCode}</td>
                         </tr>
                     ))}
 

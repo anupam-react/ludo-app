@@ -100,6 +100,7 @@
 }
 .form-container3{
     margin: 20px 20px;
+    padding: 0px 20px;
     height: 50vh;
     overflow-y: scroll;
     label{
@@ -110,14 +111,12 @@
         background-color: #D9D9D9;
         border: none;
         width: 100%;
-        padding: 10px 0px;
+        padding: 10px 10px;
         border-radius: 10px;
         margin-top: 5px;
         margin-bottom: 14px;
     }
-    select{
-        padding: 10px;
-    }
+  
 }
 .button-conatiner1{
     display: flex;

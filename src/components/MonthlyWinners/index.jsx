@@ -2,9 +2,10 @@ import React from 'react'
 import './allusers.scss'
 import MonthlyTableheader from '../common/MonthlyTableheader'
 import useMonthlyWinners from '../../hooks/useMonthlyWinners'
+import { getDate, getTime } from '../../utiils'
 const MonthlyWinners = () => {
     const { allMonthlyWinners } = useMonthlyWinners()
-    console.log(allMonthlyWinners)
+
     return (
         <div className='user-container'>
             <MonthlyTableheader title="Monthly Winners " />
@@ -18,9 +19,10 @@ const MonthlyWinners = () => {
                     </tr>
                     {allMonthlyWinners?.map((data, i) => (
                         <tr key={i}>
-                            <td>{data?.firstName + " " + data?.lastName}</td>
-                            <td>{data?.wallet}</td>
-                            <td>${data?.deposite}</td>
+                            <td>{data?.winner?.firstName + " " + data?.winner?.lastName}</td>
+                            <td>{getDate(data?.updatedAt)}</td>
+                            <td>{getTime(data?.updatedAt)}</td>
+                            <td>${data?.firstPrize}</td>
                         </tr>
                     ))}
                 </table>

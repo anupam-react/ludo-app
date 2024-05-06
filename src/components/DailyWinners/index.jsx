@@ -2,9 +2,9 @@ import React from 'react'
 import Tableheader from '../common/Tableheader'
 import './allusers.scss'
 import useDailyWinners from '../../hooks/useDailyWinners'
+import { getTime } from '../../utiils'
 const DailyWinners  = () => {
     const { allDailyWinnersUsers } = useDailyWinners()
-    console.log(allDailyWinnersUsers)
     return (
         <div className='user-container'>
             <Tableheader title="Daily Winners " />
@@ -17,9 +17,9 @@ const DailyWinners  = () => {
                     </tr>
                     {allDailyWinnersUsers?.map((data, i) => (
                         <tr key={i}>
-                            <td>{data?.firstName + " " + data?.lastName}</td>
-                            <td>{data?.wallet}</td>
-                            <td>${data?.deposite}</td>
+                            <td>{data?.winner?.firstName + " " + data?.winner?.lastName}</td>
+                            <td>{getTime(data?.updatedAt)}</td>
+                            <td>${data?.firstPrize}</td>
                         </tr>
                     ))}
 
